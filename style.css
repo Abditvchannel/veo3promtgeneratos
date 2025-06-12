@@ -1,0 +1,184 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #1a237e;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: -15px;
+    font-style: italic;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #3f51b5;
+}
+
+.input-group input[type="text"],
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input[type="text"]:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #3f51b5;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.visual-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.button-group button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#generateBtn {
+    background: linear-gradient(90deg, #3f51b5, #1a237e);
+}
+
+#generateBtn:hover {
+    background: linear-gradient(90deg, #3747a4, #151c68);
+    transform: translateY(-2px);
+}
+
+#resetBtn {
+    background: #6c757d;
+}
+
+#resetBtn:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.output-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.output-box {
+    position: relative;
+}
+
+.output-box h2 {
+    color: #1a237e;
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 10px;
+}
+
+.output-box textarea {
+    width: 100%;
+    height: 300px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.output-box textarea[readonly] {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    padding: 6px 12px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+    background-color: #1a237e;
+}
+
+@media (max-width: 768px) {
+    .form-container, .output-container {
+        grid-template-columns: 1fr;
+    }
+} 
